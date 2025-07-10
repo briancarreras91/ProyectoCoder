@@ -4,38 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
     <title>IPC</title>
   </head>
   <body>
     <header>
-      <img src="./imagenes/LogoIpc.jpg" alt="Logo institucional" />
-      <nav class="navBar">
-        <ul>
-          <li class="btnNavBar">
-            <a href="./institucional.html">Institucional</a>
-          </li>
-          <li class="btnNavBar">
-            <a href="./profesionalesEpecialidades.html"
-              >Profesionales y Especialidades</a
-            >
-          </li>
-          <li class="btnNavBar">
-            <a href="./PlanIpc.html">Plan IPC</a>
-          </li>
-          <li class="btnNavBar">
-            <a href="./asesoramiento.html">Asesoramiento</a>
-          </li>
-          <li class="btnNavBar">
-            <a href="./contacto.html">Redes y Contacto</a>
-          </li>
-          <li class="btnNavBar">
-            <a href="./ObrasSociales.html">Obras Sociales</a>
-          </li>
-          <li class="btnNavBar">
-            <a href="./consultorioVirtual.html">Consultorio Virtual</a>
-          </li>
-        </ul>
-      </nav>
+      <section id="contenedorHeader">
+        <img
+          id="imgLogoHeader"
+          src="./imagenes/LogoIpc.jpg"
+          alt="Logo institucional"
+        />
+        <nav class="navBar">
+          <ul>
+            <li class="btnNavBar">
+              <a href="./institucional.html">Institucional</a>
+            </li>
+            <li class="btnNavBar">
+              <a href="./profesionalesEpecialidades.html"
+                >Profesionales y Especialidades</a
+              >
+            </li>
+            <li class="btnNavBar">
+              <a href="./PlanIpc.html">Plan IPC</a>
+            </li>
+            <li class="btnNavBar">
+              <a href="./asesoramiento.html">Asesoramiento</a>
+            </li>
+            <li class="btnNavBar">
+              <a href="./contacto.html">Redes y Contacto</a>
+            </li>
+            <li class="btnNavBar">
+              <a href="./ObrasSociales.html">Obras Sociales</a>
+            </li>
+            <li class="btnNavBar">
+              <a href="./consultorioVirtual.html">Consultorio Virtual</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
     </header>
     <main>
       <h2>
@@ -43,10 +55,76 @@
         más de 30 años, trabajando con dedicación, esmero, idoneidad y afecto,
         pilares fundamentales de nuestra filosofía.
       </h2>
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="imgCarousel"
+              src="./imagenes/ImgEvEscolar.jpg"
+              class="d-block w-100"
+              alt="Imagen Ingreso escolar"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="imgCarousel"
+              src="./imagenes/ImgEvClinica.jpg"
+              class="d-block w-100"
+              alt="Imagen EV clinica"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="imgCarousel"
+              src="./imagenes/imEvCardio.jpg"
+              class="d-block w-100"
+              alt="Imagen EV cardiologica"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="imgCarousel"
+              src="./imagenes/ImgEvFisica.jpg"
+              class="d-block w-100"
+              alt="Imagen Aptitud fisica"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="imgCarousel"
+              src="./imagenes/ImgEvGineco.jpg"
+              class="d-block w-100"
+              alt="Imagen Ev ginecologica"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </main>
-    <footer>
+    <footer id="contenedorFooter">
       <div>
-        <img src="./imagenes/LogoIpcPng.png" alt="LogoInsPng" />
+        <img
+          id="imgLogoFooter"
+          src="./imagenes/LogoIpcPng.png"
+          alt="LogoInsPng"
+        />
       </div>
       <div>
         <h6>Contacto</h6>
@@ -58,12 +136,23 @@
       <div>
         <h6>Seguinos en nuestras redes</h6>
         <a href="https://www.facebook.com/IPCInstitutoMedico/" target="_blank"
-          ><img src="./imagenes/facebook.png" alt="Imagen facebook"
+          ><img
+            class="imgRedesFooter"
+            src="./imagenes/facebook.png"
+            alt="Imagen facebook"
         /></a>
         <a href="https://www.instagram.com/ipcmedico/" target="_blank"
-          ><img src="./imagenes/instagram.png" alt="Imagenen instragram"
+          ><img
+            class="imgRedesFooter"
+            src="./imagenes/instagram.png"
+            alt="Imagenen instragram"
         /></a>
       </div>
     </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
