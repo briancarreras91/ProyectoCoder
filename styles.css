@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/*---------------------------------------------IMAGENES---------------------------------------------*/
 /*Imagenes de obras sociales*/
 
 .imgObrasSociales {
@@ -34,8 +35,8 @@
 /*Imagen logo footer*/
 
 #imgLogoFooter {
-  width: 220px;
-  height: 120px;
+  width: 240px;
+  height: 192px;
 }
 
 /*Caja contenedora del header*/
@@ -45,12 +46,60 @@
   width: 100%;
   height: 220px;
 }
-
+/*---------------------------------------------FOOTER---------------------------------------------*/
 /*Caja contenedora del footer*/
 
 #contenedorFooter {
-  display: flex;
+  display: grid;
+  grid-template-areas: "logo contacto redes";
   width: 100%;
   height: 180px;
-  background-color: aqua;
+  background-color: #8acbc5;
+}
+
+.cajaFooterLogo {
+  grid-area: logo;
+}
+
+.cajaFooterContacto {
+  grid-area: contacto;
+}
+
+.cajaFooterRedes {
+  grid-area: redes;
+}
+/*Botones del navbar*/
+
+.navBar {
+  display: flex;
+}
+
+/*Texto principal de la pagina de inicio*/
+
+#textPricipal {
+  display: flex;
+  text-align: center;
+  color: blue;
+}
+
+/*Caja contenedora de la pagina completa*/
+
+#paginaCompleta {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
 }
