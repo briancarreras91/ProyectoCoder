@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "TikTok Sans", sans-serif;
+  margin-bottom: 0;
 }
 
 /*---------------------------------------------IMAGENES---------------------------------------------*/
@@ -38,6 +39,11 @@
 #imgLogoFooter {
   width: 240px;
   height: 192px;
+}
+/*imagenes de logos pagina asesoramiento*/
+.imgIconosAsesoramiento {
+  height: 20px;
+  width: 20px;
 }
 /*---------------------------------------------header---------------------------------------------*/
 /*Caja contenedora del header*/
@@ -80,19 +86,19 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  color: rgba(25, 25, 226, 0.829);
+  color: #1142a1;
   font-size: 28px;
   line-height: 1.425;
   width: 100%;
-  padding: 60px;
+  padding: 60px 260px 60px 260px;
 }
 
 /*Titulos principales de todas las paginas*/
 .TituloPrincipal {
   background-color: #c1c4c4;
   justify-content: left;
-  padding: 20px;
-  color: rgba(25, 25, 226, 0.829);
+  padding: 60px;
+  color: #1142a1;
   text-transform: uppercase;
 }
 
@@ -126,4 +132,25 @@ footer {
 .subtitulosInformativos {
   text-transform: uppercase;
   color: #c1c4c4;
+}
+
+/*---------------------------------------------CONTENIDO PAGINA DE ASESORAMEINTO---------------------------------------------*/
+.paginaAsesoramiento {
+  display: grid;
+  grid-template-areas:
+    "tituloFormulario tituloDatos"
+    "fomulario datos"
+    "fomulario datos";
+}
+.contenedorTitulofomulario {
+  grid-area: tituloFormulario;
+}
+.contenedorFomularioAsesoramiento {
+  grid-area: fomulario;
+}
+.contenedorTituloDatos {
+  grid-area: tituloDatos;
+}
+.contenedorDatosAsesoramiento {
+  grid-area: datos;
 }
