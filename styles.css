@@ -5,7 +5,194 @@
   font-family: "TikTok Sans", sans-serif;
   margin-bottom: 0;
 }
+body {
+  height: 100%;
+}
+header {
+  height: 10vh;
+  flex: 1;
+}
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 
+/*---------------------------------------------header---------------------------------------------*/
+/*Caja contenedora del header*/
+
+#contenedorHeader {
+  display: flex;
+  width: 100%;
+  height: 220px;
+  overflow: auto;
+}
+/*---------------------------------------------FOOTER---------------------------------------------*/
+/*Caja contenedora del footer*/
+
+#contenedorFooter {
+  display: grid;
+  grid-template-areas: "logo contacto redes";
+  width: 100%;
+  height: 180px;
+  background-color: #c1c4c4;
+  overflow: auto;
+}
+
+.cajaFooterLogo {
+  grid-area: logo;
+  justify-self: start;
+}
+
+.cajaFooterContacto {
+  grid-area: contacto;
+  place-self: center;
+}
+
+.cajaFooterRedes {
+  grid-area: redes;
+  place-self: center;
+}
+
+/*Texto principal de la pagina de inicio*/
+
+#textPricipal {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #1142a1;
+  font-size: 28px;
+  line-height: 1.425;
+  width: 100%;
+  padding: 60px 260px 60px 260px;
+}
+
+/*Titulos principales de todas las paginas*/
+.TituloPrincipal {
+  background-color: #c1c4c4;
+  justify-content: left;
+  padding: 20px;
+  color: #1142a1;
+  text-transform: uppercase;
+  height: 80px;
+}
+
+/*Caja contenedora de la pagina completa*/
+
+#paginaCompleta {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*---------------------------------------------CONTENIDO DE PAGINAS---------------------------------------------*/
+.contenidoInformativo {
+  padding: 3%;
+}
+
+.subtitulosInformativos {
+  text-transform: uppercase;
+  color: #c1c4c4;
+}
+
+/*---------------------------------------------CONTENIDO PAGINA DE ASESORAMEINTO---------------------------------------------*/
+
+.titulosAsesoramiento {
+  color: #c1c4c4;
+  display: flex;
+  justify-content: center;
+}
+
+.textoDatoAsesoramiento {
+  text-decoration: none;
+  color: #1142a1;
+}
+.paginaAsesoramiento {
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+  grid-template-areas:
+    "tituloFormulario tituloDatos"
+    "fomulario datos";
+  overflow-y: scroll;
+}
+.contenedorTitulofomulario {
+  grid-area: tituloFormulario;
+  height: auto;
+}
+.contenedorFomularioAsesoramiento {
+  grid-area: fomulario;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.elementoFormulario {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.elementoFormulario label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #343a40;
+}
+
+.elementoFormulario input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.elementoFormulario textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contenedorTituloDatos {
+  height: auto;
+  grid-area: tituloDatos;
+}
+.contenedorDatosAsesoramiento {
+  grid-area: datos;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  justify-content: space-evenly;
+}
+
+.datoAsesoramiento {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.5rem;
+  flex-wrap: wrap;
+}
+/*---------------------------------------------CONTENIDO PAGINA DE OBRAS SOCIALES---------------------------------------------*/
+.contenedorDeImagenesOS {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+/*Textos informativos de tamaño medio*/
+.textosMedioGeneral {
+  padding: 10px;
+  font-size: medium;
+}
 /*---------------------------------------------IMAGENES---------------------------------------------*/
 /*Imagenes de obras sociales*/
 
@@ -44,113 +231,4 @@
 .imgIconosAsesoramiento {
   height: 20px;
   width: 20px;
-}
-/*---------------------------------------------header---------------------------------------------*/
-/*Caja contenedora del header*/
-
-#contenedorHeader {
-  display: flex;
-  width: 100%;
-  height: 220px;
-}
-/*---------------------------------------------FOOTER---------------------------------------------*/
-/*Caja contenedora del footer*/
-
-#contenedorFooter {
-  display: grid;
-  grid-template-areas: "logo contacto redes";
-  width: 100%;
-  height: 180px;
-  background-color: #c1c4c4;
-}
-
-.cajaFooterLogo {
-  grid-area: logo;
-  justify-self: start;
-}
-
-.cajaFooterContacto {
-  grid-area: contacto;
-  place-self: center;
-}
-
-.cajaFooterRedes {
-  grid-area: redes;
-  place-self: center;
-}
-
-/*Texto principal de la pagina de inicio*/
-
-#textPricipal {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  color: #1142a1;
-  font-size: 28px;
-  line-height: 1.425;
-  width: 100%;
-  padding: 60px 260px 60px 260px;
-}
-
-/*Titulos principales de todas las paginas*/
-.TituloPrincipal {
-  background-color: #c1c4c4;
-  justify-content: left;
-  padding: 60px;
-  color: #1142a1;
-  text-transform: uppercase;
-}
-
-/*Caja contenedora de la pagina completa*/
-
-#paginaCompleta {
-  display: grid;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-}
-
-header {
-  grid-area: header;
-}
-
-main {
-  grid-area: main;
-}
-
-footer {
-  grid-area: footer;
-}
-
-/*---------------------------------------------CONTENIDO DE PAGINAS---------------------------------------------*/
-.contenidoInformativo {
-  padding: 3%;
-}
-
-.subtitulosInformativos {
-  text-transform: uppercase;
-  color: #c1c4c4;
-}
-
-/*---------------------------------------------CONTENIDO PAGINA DE ASESORAMEINTO---------------------------------------------*/
-.paginaAsesoramiento {
-  display: grid;
-  grid-template-areas:
-    "tituloFormulario tituloDatos"
-    "fomulario datos"
-    "fomulario datos";
-}
-.contenedorTitulofomulario {
-  grid-area: tituloFormulario;
-}
-.contenedorFomularioAsesoramiento {
-  grid-area: fomulario;
-}
-.contenedorTituloDatos {
-  grid-area: tituloDatos;
-}
-.contenedorDatosAsesoramiento {
-  grid-area: datos;
 }
