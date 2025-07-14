@@ -96,6 +96,43 @@ main {
   text-transform: uppercase;
   color: #c1c4c4;
 }
+/*Textos informativos de tamaño medio*/
+.textosMedioGeneral {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+}
+/*---------------------------------------------CONTENIDO DE PAGINA PRINCIPAL---------------------------------------------*/
+.contenidoCarousel {
+  position: relative;
+}
+
+.cajaTextoCentrada {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  z-index: 10;
+  max-width: 85%;
+  overflow: auto;
+}
+
+.tituloCarousel {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.textoCarousel {
+  font-size: 1.2rem;
+  margin: 0;
+}
 
 /*---------------------------------------------CONTENIDO PAGINA DE ASESORAMEINTO---------------------------------------------*/
 
@@ -188,11 +225,37 @@ main {
   padding: 20px;
 }
 
-/*Textos informativos de tamaño medio*/
-.textosMedioGeneral {
-  padding: 10px;
-  font-size: medium;
+/*---------------------------------------------CONTENIDO PAGINA DE CONSULTORIO VIRTUAL---------------------------------------------*/
+.formularioConsultorioVirtual {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  gap: 16px;
 }
+
+.formularioConsultorioVirtual label {
+  font-weight: bold;
+  color: #343a40;
+}
+
+.formularioConsultorioVirtual input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.formularioConsultorioVirtual select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
 /*---------------------------------------------IMAGENES---------------------------------------------*/
 /*Imagenes de obras sociales*/
 
