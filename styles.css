@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "TikTok Sans", sans-serif;
-  margin-bottom: 0;
 }
 body {
   height: 100%;
@@ -39,7 +38,9 @@ main {
   background-color: #c1c4c4;
   overflow: auto;
 }
-
+.listaFooter {
+  list-style-type: none;
+}
 .cajaFooterLogo {
   grid-area: logo;
   justify-self: start;
@@ -54,37 +55,24 @@ main {
   grid-area: redes;
   place-self: center;
 }
+@media (max-width: 768px) {
+  #contenedorFooter {
+    grid-template-areas:
+      "logo"
+      "contacto"
+      "redes";
+    grid-template-columns: 1fr;
+    height: auto;
+    row-gap: 20px;
+    padding: 20px;
+    text-align: center;
+  }
 
-/*Texto principal de la pagina de inicio*/
-
-#textPricipal {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  color: #1142a1;
-  font-size: 28px;
-  line-height: 1.425;
-  width: 100%;
-  padding: 60px 260px 60px 260px;
-}
-
-/*Titulos principales de todas las paginas*/
-.TituloPrincipal {
-  background-color: #c1c4c4;
-  justify-content: left;
-  padding: 20px;
-  color: #1142a1;
-  text-transform: uppercase;
-  height: 80px;
-}
-
-/*Caja contenedora de la pagina completa*/
-
-#paginaCompleta {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  .cajaFooterLogo,
+  .cajaFooterContacto,
+  .cajaFooterRedes {
+    justify-self: center;
+  }
 }
 
 /*---------------------------------------------CONTENIDO DE PAGINAS---------------------------------------------*/
@@ -103,7 +91,38 @@ main {
   font-weight: 400;
   color: #666666;
 }
+/*Titulos principales de todas las paginas*/
+.TituloPrincipal {
+  background-color: #c1c4c4;
+  justify-content: left;
+  padding: 20px;
+  color: #1142a1;
+  text-transform: uppercase;
+  height: 80px;
+}
+
+/*Caja contenedora de la pagina completa*/
+
+#paginaCompleta {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 /*---------------------------------------------CONTENIDO DE PAGINA PRINCIPAL---------------------------------------------*/
+/*Texto principal de la pagina de inicio*/
+
+#textPricipal {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #1142a1;
+  font-size: 28px;
+  line-height: 1.425;
+  width: 100%;
+  padding: 2.5%;
+}
+
 .contenidoCarousel {
   position: relative;
 }
