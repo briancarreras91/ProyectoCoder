@@ -1,4 +1,11 @@
 @charset "UTF-8";
+/*Animacion*/
+@keyframes entrada-derecha {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -225,6 +232,34 @@ main {
   gap: 12px;
   font-size: 1.5rem;
   flex-wrap: wrap;
+  opacity: 0;
+  transform: translateX(80px);
+  animation: entrada-derecha 0.5s ease-out 1s forwards;
+}
+.datoAsesoramiento:nth-child(1) {
+  opacity: 0;
+  transform: translateX(80px);
+  animation: entrada-derecha 0.4s ease-out 0.1s forwards;
+}
+.datoAsesoramiento:nth-child(2) {
+  opacity: 0;
+  transform: translateX(80px);
+  animation: entrada-derecha 0.8s ease-out 0.1s forwards;
+}
+.datoAsesoramiento:nth-child(3) {
+  opacity: 0;
+  transform: translateX(80px);
+  animation: entrada-derecha 1s ease-out 0.2s forwards;
+}
+.datoAsesoramiento:nth-child(4) {
+  opacity: 0;
+  transform: translateX(80px);
+  animation: entrada-derecha 1.5s ease-out 0.2s forwards;
+}
+.datoAsesoramiento:nth-child(5) {
+  opacity: 0;
+  transform: translateX(80px);
+  animation: entrada-derecha 1.8s ease-out 0.2s forwards;
 }
 
 /* CONSULTORIO  VIRTUAL*/
