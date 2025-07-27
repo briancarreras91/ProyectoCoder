@@ -20,3 +20,16 @@
   @include borde-redondeado(12px);
   @include sombra-suave;
 }
+/*Animacion*/
+@mixin slide-in-right($duracion: 4s, $delay: 1s, $offset: 80px) {
+  opacity: 0;
+  transform: translateX($offset);
+  animation: entrada-derecha $duracion ease-out $delay forwards;
+}
+
+@keyframes entrada-derecha {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
