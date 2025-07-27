@@ -1,0 +1,37 @@
+@use "variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $fuente-principal;
+}
+
+body {
+  height: 100%;
+}
+
+.listaFooter {
+  list-style-type: none;
+}
+
+.subtitulosInformativos {
+  text-transform: uppercase;
+  color: $color-gris-claro;
+}
+
+.textosMedioGeneral {
+  padding: $espaciado-sm;
+  font-size: 16px;
+  font-weight: 400;
+  color: $color-gris-medio;
+}
+
+.TituloPrincipal {
+  background-color: $color-gris-claro;
+  justify-content: left;
+  padding: $espaciado-md;
+  color: $color-azul;
+  text-transform: uppercase;
+  height: 80px;
+}

@@ -1,51 +1,16 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "TikTok Sans", sans-serif;
 }
-
 body {
   height: 100%;
 }
-
-.listaFooter {
-  list-style-type: none;
-}
-
-.subtitulosInformativos {
-  text-transform: uppercase;
-  color: #c1c4c4;
-}
-
-.textosMedioGeneral {
-  padding: 10px;
-  font-size: 16px;
-  font-weight: 400;
-  color: #666666;
-}
-
-.TituloPrincipal {
-  background-color: #c1c4c4;
-  justify-content: left;
-  padding: 20px;
-  color: #1142a1;
-  text-transform: uppercase;
-  height: 80px;
-}
-
-#paginaCompleta {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
 header {
   height: 10vh;
   flex: 1;
 }
-
 main {
   flex-grow: 1;
   display: flex;
@@ -53,22 +18,28 @@ main {
   justify-content: flex-start;
 }
 
-/* HEADER */
+/*---------------------------------------------header---------------------------------------------*/
+/*Caja contenedora del header*/
+
 #contenedorHeader {
   display: flex;
   width: 100%;
   height: 220px;
   overflow: auto;
 }
+/*---------------------------------------------FOOTER---------------------------------------------*/
+/*Caja contenedora del footer*/
 
-/* FOOTER */
 #contenedorFooter {
   display: grid;
   grid-template-areas: "logo contacto redes";
   width: 100%;
+
   background-color: #c1c4c4;
 }
-
+.listaFooter {
+  list-style-type: none;
+}
 .cajaFooterLogo {
   grid-area: logo;
   justify-self: start;
@@ -83,32 +54,67 @@ main {
   grid-area: redes;
   place-self: center;
 }
-
 @media (max-width: 768px) {
   #contenedorFooter {
-    grid-template-areas: "logo" "contacto" "redes";
+    grid-template-areas:
+      "logo"
+      "contacto"
+      "redes";
     grid-template-columns: 1fr;
     height: auto;
     row-gap: 20px;
     padding: 20px;
     text-align: center;
   }
+
   .cajaFooterLogo,
   .cajaFooterContacto,
   .cajaFooterRedes {
     justify-self: center;
   }
 }
-/* SECCIONES */
+
+/*---------------------------------------------CONTENIDO DE PAGINAS---------------------------------------------*/
 .contenidoInformativo {
   padding: 3%;
 }
 
+.subtitulosInformativos {
+  text-transform: uppercase;
+  color: #c1c4c4;
+}
+/*Textos informativos de tamaño medio*/
+.textosMedioGeneral {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+}
+/*Titulos principales de todas las paginas*/
+.TituloPrincipal {
+  background-color: #c1c4c4;
+  justify-content: left;
+  padding: 20px;
+  color: #1142a1;
+  text-transform: uppercase;
+  height: 80px;
+}
+
+/*Caja contenedora de la pagina completa*/
+
+#paginaCompleta {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/*---------------------------------------------CONTENIDO DE PAGINA PRINCIPAL---------------------------------------------*/
+/*Texto principal de la pagina de inicio*/
+
 #textPricipal {
   display: flex;
+  text-align: center;
   justify-content: center;
   align-items: center;
-  text-align: center;
   color: #1142a1;
   font-size: 28px;
   line-height: 1.425;
@@ -116,7 +122,6 @@ main {
   padding: 2.5%;
 }
 
-/* CAROUSEL */
 .contenidoCarousel {
   position: relative;
   height: 500px;
@@ -148,13 +153,7 @@ main {
   margin: 0;
 }
 
-/* ASESORAMIENTO */
-.paginaAsesoramiento {
-  display: grid;
-  grid-template-rows: 1fr 10fr;
-  grid-template-areas: "tituloFormulario tituloDatos" "fomulario datos";
-  overflow-y: scroll;
-}
+/*---------------------------------------------CONTENIDO PAGINA DE ASESORAMEINTO---------------------------------------------*/
 
 .titulosAsesoramiento {
   color: #c1c4c4;
@@ -166,18 +165,24 @@ main {
   text-decoration: none;
   color: #1142a1;
 }
-
+.paginaAsesoramiento {
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+  grid-template-areas:
+    "tituloFormulario tituloDatos"
+    "fomulario datos";
+  overflow-y: scroll;
+}
 .contenedorTitulofomulario {
   grid-area: tituloFormulario;
   height: auto;
 }
-
 .contenedorFomularioAsesoramiento {
   grid-area: fomulario;
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 2rem;
+  padding: 30px;
   background-color: #f8f9fa;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -193,14 +198,18 @@ main {
   margin-bottom: 6px;
   color: #343a40;
 }
-.elementoFormulario input,
-.elementoFormulario textarea {
+
+.elementoFormulario input {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
 }
 .elementoFormulario textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
   resize: vertical;
   min-height: 100px;
 }
@@ -209,7 +218,6 @@ main {
   height: auto;
   grid-area: tituloDatos;
 }
-
 .contenedorDatosAsesoramiento {
   grid-area: datos;
   display: flex;
@@ -226,18 +234,28 @@ main {
   font-size: 1.5rem;
   flex-wrap: wrap;
 }
+/*---------------------------------------------CONTENIDO PAGINA DE OBRAS SOCIALES---------------------------------------------*/
+.contenedorDeImagenesOS {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+}
 
-/* CONSULTORIO  VIRTUAL*/
+/*---------------------------------------------CONTENIDO PAGINA DE CONSULTORIO VIRTUAL---------------------------------------------*/
 .formularioConsultorioVirtual {
   display: flex;
   flex-direction: column;
   width: 70%;
   margin: 30px auto;
-  padding: 2rem;
+  padding: 30px;
   background-color: #f8f9fa;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   gap: 16px;
+  padding: 2rem;
 }
 
 .formularioConsultorioVirtual label {
@@ -245,24 +263,31 @@ main {
   color: #343a40;
 }
 
-.formularioConsultorioVirtual input,
+.formularioConsultorioVirtual input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
 .formularioConsultorioVirtual select {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
 }
-
 .btnEnviar {
   width: 30%;
 }
 
-/* IMÁGENES */
+/*---------------------------------------------IMAGENES---------------------------------------------*/
+/*Imagenes de obras sociales*/
+
 .imgObrasSociales {
   width: 200px;
   height: 200px;
 }
 
+/*Imagenes del carousel*/
 .imgCarousel {
   width: 100%;
   height: 100%;
@@ -270,24 +295,28 @@ main {
   display: block;
 }
 
+/*Imagenes de redes footer*/
+
 .imgRedesFooter {
   width: 28px;
   height: 28px;
 }
+
+/*Imagen logo header*/
 
 #imgLogoHeader {
   width: 107px;
   height: 96px;
 }
 
+/*Imagen logo footer*/
+
 #imgLogoFooter {
   width: 240px;
   height: 192px;
 }
-
+/*imagenes de logos pagina asesoramiento*/
 .imgIconosAsesoramiento {
   height: 20px;
   width: 20px;
 }
-
-/*# sourceMappingURL=styles.css.map */

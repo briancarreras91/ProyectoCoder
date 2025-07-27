@@ -1,39 +1,5 @@
-@charset "UTF-8";
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "TikTok Sans", sans-serif;
-}
-
-body {
-  height: 100%;
-}
-
-.listaFooter {
-  list-style-type: none;
-}
-
-.subtitulosInformativos {
-  text-transform: uppercase;
-  color: #c1c4c4;
-}
-
-.textosMedioGeneral {
-  padding: 10px;
-  font-size: 16px;
-  font-weight: 400;
-  color: #666666;
-}
-
-.TituloPrincipal {
-  background-color: #c1c4c4;
-  justify-content: left;
-  padding: 20px;
-  color: #1142a1;
-  text-transform: uppercase;
-  height: 80px;
-}
+@use "variables" as *;
+@use "mixins" as *;
 
 #paginaCompleta {
   display: flex;
@@ -66,7 +32,7 @@ main {
   display: grid;
   grid-template-areas: "logo contacto redes";
   width: 100%;
-  background-color: #c1c4c4;
+  background-color: $color-gris-claro;
 }
 
 .cajaFooterLogo {
@@ -86,30 +52,33 @@ main {
 
 @media (max-width: 768px) {
   #contenedorFooter {
-    grid-template-areas: "logo" "contacto" "redes";
+    grid-template-areas:
+      "logo"
+      "contacto"
+      "redes";
     grid-template-columns: 1fr;
     height: auto;
-    row-gap: 20px;
-    padding: 20px;
+    row-gap: $espaciado-md;
+    padding: $espaciado-md;
     text-align: center;
   }
+
   .cajaFooterLogo,
   .cajaFooterContacto,
   .cajaFooterRedes {
     justify-self: center;
   }
 }
+
 /* SECCIONES */
 .contenidoInformativo {
   padding: 3%;
 }
 
 #textPricipal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
   text-align: center;
-  color: #1142a1;
+  color: $color-azul;
   font-size: 28px;
   line-height: 1.425;
   width: 100%;
@@ -152,19 +121,21 @@ main {
 .paginaAsesoramiento {
   display: grid;
   grid-template-rows: 1fr 10fr;
-  grid-template-areas: "tituloFormulario tituloDatos" "fomulario datos";
+  grid-template-areas:
+    "tituloFormulario tituloDatos"
+    "fomulario datos";
   overflow-y: scroll;
 }
 
 .titulosAsesoramiento {
-  color: #c1c4c4;
+  color: $color-gris-claro;
   display: flex;
   justify-content: center;
 }
 
 .textoDatoAsesoramiento {
   text-decoration: none;
-  color: #1142a1;
+  color: $color-azul;
 }
 
 .contenedorTitulofomulario {
@@ -177,32 +148,32 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 2rem;
-  background-color: #f8f9fa;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  @include formulario-base;
 }
 
 .elementoFormulario {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
-}
-.elementoFormulario label {
-  font-weight: bold;
-  margin-bottom: 6px;
-  color: #343a40;
-}
-.elementoFormulario input,
-.elementoFormulario textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-.elementoFormulario textarea {
-  resize: vertical;
-  min-height: 100px;
+  margin-bottom: $espaciado-md;
+
+  label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: $color-label;
+  }
+
+  input,
+  textarea {
+    padding: $espaciado-sm;
+    border: 1px solid $color-borde;
+    @include borde-redondeado;
+    font-size: 1rem;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
 }
 
 .contenedorTituloDatos {
@@ -215,7 +186,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 20px;
+  padding: $espaciado-md;
   justify-content: space-evenly;
 }
 
@@ -232,24 +203,21 @@ main {
   display: flex;
   flex-direction: column;
   width: 70%;
-  margin: 30px auto;
-  padding: 2rem;
-  background-color: #f8f9fa;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: $espaciado-lg auto;
+  @include formulario-base;
   gap: 16px;
 }
 
 .formularioConsultorioVirtual label {
   font-weight: bold;
-  color: #343a40;
+  color: $color-label;
 }
 
 .formularioConsultorioVirtual input,
 .formularioConsultorioVirtual select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  padding: $espaciado-sm;
+  border: 1px solid $color-borde;
+  @include borde-redondeado;
   font-size: 1rem;
 }
 
@@ -289,5 +257,3 @@ main {
   height: 20px;
   width: 20px;
 }
-
-/*# sourceMappingURL=styles.css.map */

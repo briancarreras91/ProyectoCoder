@@ -1,0 +1,22 @@
+@use "variables" as *;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin sombra-suave {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@mixin borde-redondeado($radius: 6px) {
+  border-radius: $radius;
+}
+
+@mixin formulario-base {
+  padding: 2rem;
+  background-color: $color-form-fondo;
+  @include borde-redondeado(12px);
+  @include sombra-suave;
+}
